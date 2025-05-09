@@ -53,4 +53,8 @@ public class DirectoryContext {
     public String getCurrentPath(){
         return "/"+String.join("/",path);
     }
+
+    public DirectoryNode getCurrentDirectoryNode(){
+        return current;
+    }
 }

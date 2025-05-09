@@ -20,6 +20,8 @@ public class CommandParser {
         }else if(input.startsWith("mkdir")){
             String name=input.substring(6).trim();
             return new MkdirCommand(name,context);
+        }else if(input.equals("ls")){
+            return new LsCommand(context);
         }else{
             return new UnknowCommand(input);
         }
