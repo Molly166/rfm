@@ -48,5 +48,9 @@ public class DirectoryNode {
     public boolean hasFile(String name){
         return files.containsKey(name);
     }
+
+    public void removeFile(String fileName){
+        files.remove(fileName);
+    }
 }
 

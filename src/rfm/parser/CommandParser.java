@@ -25,6 +25,9 @@ public class CommandParser {
         }else if(input.startsWith("touch")){
             String fileName=input.substring(6).trim();
             return new TouchCommand(context,fileName);
+        }else if(input.startsWith("rm")){
+            String fileName=input.substring(3).trim();
+            return new RmCommand(context,fileName);
         }else{
             return new UnknowCommand(input);
         }
