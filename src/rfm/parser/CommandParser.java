@@ -17,6 +17,9 @@ public class CommandParser {
           return new CdCommand(dir,context);
         } else if(input.equals("exit")){
             return new ExitCommand();
+        }else if(input.startsWith("mkdir")){
+            String name=input.substring(6).trim();
+            return new MkdirCommand(name,context);
         }else{
             return new UnknowCommand(input);
         }
