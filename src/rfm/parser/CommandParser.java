@@ -28,6 +28,8 @@ public class CommandParser {
         }else if(input.startsWith("rm")){
             String fileName=input.substring(3).trim();
             return new RmCommand(context,fileName);
+        }else if(input.equals("pwd")){
+            return new PwdCommand(context);
         }else{
             return new UnknowCommand(input);
         }

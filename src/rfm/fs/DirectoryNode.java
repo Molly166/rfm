@@ -37,6 +37,10 @@ public class DirectoryNode {
         return name;
     }
 
+    public DirectoryNode getParent(){
+        return parent;
+    }
+
     public Map<String ,FileNode>getFiles(){
         return files;
     }
