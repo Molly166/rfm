@@ -22,6 +22,9 @@ public class CommandParser {
             return new MkdirCommand(name,context);
         }else if(input.equals("ls")){
             return new LsCommand(context);
+        }else if(input.startsWith("touch")){
+            String fileName=input.substring(6).trim();
+            return new TouchCommand(context,fileName);
         }else{
             return new UnknowCommand(input);
         }
